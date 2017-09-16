@@ -1,0 +1,20 @@
+<template name="editProfile">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <h1>Edit Profile</h1>
+            <form id="profile-form">
+                <label>Reward Type</label>
+                <input type="radio" name="rewardType" class="profile-rewardType">Dollars
+                <input type="radio" name="rewardType" class="profile-rewardType">Points<br>
+                <label>Reward Period</label>
+                <label>Edit Children</label>
+                {{> childrenList }}
+                <button class="btn btn-primary" id="profile-edit-btn">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</template>

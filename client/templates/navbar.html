@@ -1,0 +1,35 @@
+<template name="navbar">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{pathFor 'home_page'}}">Job Jars - The Easiest Way To Get Chores Done</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    {{#if currentUser}}
+                        {{#if isParent}}
+                            <li><a href="/overview">Overview</a></li>
+                            <li><a href="/chores">Chore List</a></li>
+                            <li><a href="/profile">Profile</a> </li>
+                        {{else}}
+                            <li><a href="/myChores">My Chores</a> </li>
+                        {{/if}}
+                        <li><a href="/logout">Sign Out</a></li>
+                    {{else}}
+                        <li><a href="{{pathFor 'about'}}">About</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/login">Sign In</a></li>
+                    {{/if}}
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</template>

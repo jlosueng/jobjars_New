@@ -1,0 +1,22 @@
+<template name="taskDetail">
+    {{TITLE "Job Jars - Chore Detail"}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>{{task}}</h1>
+
+                <div class="col-md-3">
+                    Description: {{desc}}
+                </div>
+                <div class="col-md-1">Value: {{value}}</div>
+
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <button class="btn">Edit</button>
+                <button class="btn">Delete</button>
+                <button class="btn">Back</button>
+            </div>
+        </div>
+
+    </div>
+</template>

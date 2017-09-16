@@ -1,0 +1,24 @@
+<template name="chores">
+    <div class="span9" id="choreList">
+        <h1>Tasks</h1>
+            <div class="column">
+            {{#each tasks}}
+                <div class="portlet">
+                    <div class="portlet-header ui-sortable">
+                        <a href="{{pathFor 'taskDetail'}}">{{task}}</a>
+                    </div>
+                    <div class="portlet-content">
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+        <div id="addTask">
+          <a href="#">
+            <i class='icon-plus'></i>
+            Add Task
+          </a>
+        </div>
+        {{>addTask}}
+    </div>
+</template>
+

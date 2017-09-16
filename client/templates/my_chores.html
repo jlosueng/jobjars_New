@@ -1,0 +1,89 @@
+<template name="myChores">
+    {{#if currentUser}}
+    <div class="container">
+        <div class="row-fluid">
+            <div class="col-md-4 ui-sortable">
+                <h1>Available Chores</h1>
+                <div id="available-chores" class="ui-sortable">
+                    {{#each tasks}}
+                        {{#if available}}
+                            {{> availableChore}}
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-md-4 ui-sortable">
+                <h1>My Chores</h1>
+                <div id="mine" class="ui-sortable">
+                    {{#each mines}}
+                       {{ >mine}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-md-4 ui-sortable">
+                <h1>Done Chores</h1>
+                <div id="jar" class="ui-sortable">
+                    {{#each dones}}
+                        {{ >done }}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</template>
+
+<template name="options" >
+        <span class="glyphicon glyphicon-edit" ></span>
+        <span class="glyphicon glyphicon-remove-sign"></span>
+</template>
+
+<template name="availableChore">
+   {{> task}}
+</template>
+
+<template name="mine">
+    {{> my_task}}
+</template>
+
+<template name="done">
+    {{> task}}
+</template>
+
+<template name="task">
+    <div id="{{task_id}}" class="chore ui-state-default" draggable="true">
+        <table>
+            <tr>
+                <td>Task:</td>
+                <td>{{task}}</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>{{desc}}</td>
+            </tr>
+            <tr>
+                <td>Value:</td>
+                <td>{{value}}</td>
+            </tr>
+        </table>
+    </div>
+</template>
+
+<template name="my_task">
+    <div id="{{task_id}}" class="chore ui-state-default" draggable="true">
+        <table>
+            <tr>
+                <td>Task:</td>
+                <td>{{task}}</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>{{desc}}</td>
+            </tr>
+            <tr>
+                <td>Value:</td>
+                <td>{{value}}</td>
+            </tr>
+        </table>
+    </div>
+</template>

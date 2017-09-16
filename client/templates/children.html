@@ -1,0 +1,25 @@
+<template name="children">
+    <h1>Children</h1>
+    <table class="List" >
+        <tr>
+            <th>Name</th>
+            <th>Chores Completed</th>
+            <th>Rewards Earned</th>
+        </tr>
+        {{#each child}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{completedTasks}}</td>
+            <td>{{rewardsEarned}}</td>
+        </tr>
+        {{/each}}
+    </table>
+        <span id="addChild">
+          <a href="#">
+              <i class='glyphicon glyphicon-plus'></i>
+              Add Child
+          </a>
+        </span>
+    {{>addChild}}
+</template>
+

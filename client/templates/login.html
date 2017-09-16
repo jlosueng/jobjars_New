@@ -1,0 +1,25 @@
+<template name="loginPage">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <h1>Login</h1>
+            <div id="login-buttons">
+                <button class="btn btn-primary " id="btnLoginGoogle">Login with Google</button>
+                <button class="btn btn-primary" id="btnLoginPassword">Login with Username/Password</button>
+                <div id="login-form-div">
+                    <form id="login-form" action="action">
+                        <div>
+                            <input type="email" id="login-email" class="login-form-fields" placeholder="Email Address"/>
+                            <input type="password" id="login-password" class="login-form-fields" placeholder="Password"/>
+                            <button id="login-button" value="Sign in">Sign In</button>
+                            <button id="cancel-login-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</template>
+

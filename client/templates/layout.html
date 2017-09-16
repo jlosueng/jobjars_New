@@ -1,0 +1,10 @@
+<template name="layout">
+    <div id="container">
+        {{> yield "navbar"}}
+        <div id="body">
+        {{> yield}}
+        </div>
+        {{> yield "footer"}}
+    </div>
+</template>
+

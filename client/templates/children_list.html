@@ -1,0 +1,21 @@
+<template name="childrenList">
+    <table class="List" >
+        <tr>
+            <th>Name</th>
+
+        </tr>
+        {{#each child}}
+        <tr>
+            <td>{{name}}<span id="delete-child" class='glyphicon glyphicon-minus'></span><span id="edit-child" class="glyphicon glyphicon-pencil"></span></td>
+        </tr>
+        {{/each}}
+    </table><br>
+        <span id="addChild">
+          <a href="#">
+              <i class='glyphicon glyphicon-plus'></i>
+              Add Child
+          </a>
+        </span>
+    {{>addChild}}<br>
+</template>
+
